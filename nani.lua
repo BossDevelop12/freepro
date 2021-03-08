@@ -1,16 +1,13 @@
-local ui = game:GetService("CoreGui"):FindFirstChild("Dev Hub V1")
-if ui then
-ui:Destroy()
 local lib = {CurrentlyBinding = false,RainbowColorValue = 0, HueSelectionPosition = 0}
 
 local themes = {
 Light = {
-Color1 = Color3.fromRGB(10,59,200),
-Color2 = Color3.fromRGB(164,35,24),
-Color3 = Color3.fromRGB(225,28,22),
-TabColor = Color3.fromRGB(52, 52, 64),
-ScrollBar = Color3.fromRGB(55, 213, 76),
-TextColor = Color3.fromRGB(99,22,33)
+Color1 = Color3.fromRGB(255,255,255),
+Color2 = Color3.fromRGB(240,240,240),
+Color3 = Color3.fromRGB(228,228,228),
+TabColor = Color3.fromRGB(220, 220, 220),
+ScrollBar = Color3.fromRGB(213, 213, 213),
+TextColor = Color3.fromRGB(0,0,0)
 },
 Dark = {
 Color1 = Color3.fromRGB(35,35,35),
@@ -25,7 +22,7 @@ local HttpService = game:GetService("HttpService")
 local loadedinfo = {}
 local selectedtheme = "Light"
 local watermarkpos = "BottomLeft"
-local watermarktext = "dawid hub"
+local watermarktext = "Dev Hub V1"
 
 pcall(function()
 loadedinfo = HttpService:JSONDecode(readfile("dawidhubinfo.txt"))
@@ -123,7 +120,7 @@ end
 end
 
 local dawidlib = Instance.new("ScreenGui")
-dawidlib.Name = "Dev Hub V1"
+dawidlib.Name = "dawidlib"
 dawidlib.Parent = game.CoreGui
 dawidlib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
